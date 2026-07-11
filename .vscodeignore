@@ -1,3 +1,4 @@
+.devcontainer/
 .github/
 .husky/
 .vscode/
@@ -7,10 +8,10 @@ src/
 tests/
 .gitignore
 .prettierignore
-.prettierrc.json
 commitlint.config.js
 eslint.config.mjs
 tsconfig.json
+tsconfig.build.json
 tsconfig.test.json
 vitest.config.ts
-*.vsix
+out/**/*.map
