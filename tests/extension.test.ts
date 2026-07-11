@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import * as vscode from 'vscode';
-import { activate } from '../src/extension';
+import { activate, deactivate } from '../src/extension';
 
 describe('activate', () => {
   let context: vscode.ExtensionContext;
@@ -31,5 +31,11 @@ describe('activate', () => {
     expect(vscode.window.showInformationMessage).toHaveBeenCalledWith(
       'Hello World from your extension!'
     );
+  });
+});
+
+describe('deactivate', () => {
+  it('does not throw', () => {
+    expect(() => deactivate()).not.toThrow();
   });
 });
